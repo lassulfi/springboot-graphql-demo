@@ -25,9 +25,8 @@ public class Book {
 		
 	}
 
-	public Book(Long id, String title, String isbn, int pageCount, Author author) {
+	public Book(String title, String isbn, int pageCount, Author author) {
 		super();
-		this.id = id;
 		this.title = title;
 		this.isbn = isbn;
 		this.pageCount = pageCount;
