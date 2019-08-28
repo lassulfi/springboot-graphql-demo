@@ -1,13 +1,13 @@
 package br.com.lassulfi.resolver;
 
-import com.coxautodev.graphql.tools.GraphQLResolver;
+import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 
 import br.com.lassulfi.model.Author;
 import br.com.lassulfi.model.Book;
 import br.com.lassulfi.repository.AuthorRepository;
 import br.com.lassulfi.repository.BookRepository;
 
-public class Query implements GraphQLResolver {
+public class Query implements GraphQLQueryResolver {
 	
 	private BookRepository bookRepository;
 	private AuthorRepository authorRepository;
@@ -21,7 +21,7 @@ public class Query implements GraphQLResolver {
 		return bookRepository.findAll();
 	}
 	
-	public Iterable<Author> findAllAuthor() {
+	public Iterable<Author> findAllAuthors() {
 		return authorRepository.findAll();
 	}
 	

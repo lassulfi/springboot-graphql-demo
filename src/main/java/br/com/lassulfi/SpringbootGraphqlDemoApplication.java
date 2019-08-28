@@ -69,6 +69,7 @@ public class SpringbootGraphqlDemoApplication {
 		};
 	}
 	
+	@Bean
 	public CommandLineRunner demo(AuthorRepository authorRepository, BookRepository bookRepository) {
 		return (args) -> {
 			Author author = new Author("Herbert", "Schildt");
